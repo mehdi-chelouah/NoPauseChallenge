@@ -15,7 +15,7 @@ namespace NoPauseChallenge
 	[StaticConstructorOnStartup]
 	public static class Main
 	{
-		public static bool noPauseEnabled = false;
+		public static bool noPauseEnabled = true;
 		public static bool halfSpeedEnabled = false;
 		public static bool fullPauseActive = false;
 		public static bool halfSpeedActive = false;
@@ -133,7 +133,7 @@ namespace NoPauseChallenge
 		{
 			try
 			{
-				Scribe_Values.Look(ref Main.noPauseEnabled, "noPause", false, false);
+				Scribe_Values.Look(ref Main.noPauseEnabled, "noPause", true, true);
 				Scribe_Values.Look(ref Main.halfSpeedEnabled, "halfSpeed", false, false);
 			}
 			catch (Exception)
